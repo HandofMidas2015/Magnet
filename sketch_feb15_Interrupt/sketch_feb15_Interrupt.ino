@@ -153,7 +153,7 @@
 
 
 // I2C address 0x69 could be 0x68 depends on your wiring. 
-int MPU9150_I2C_ADDRESS = 0x68; 
+int MPU9150_I2C_ADDRESS = 0x69; 
 
 
 //pressure sensor
@@ -286,7 +286,7 @@ void MPU9150_setupCompass(){
   MPU9150_writeSensor(0x0A, 0x0F); //SelfTest
   MPU9150_writeSensor(0x0A, 0x00); //PowerDownMode
 
-  MPU9150_I2C_ADDRESS = 0x68;      //change Adress to MPU
+  MPU9150_I2C_ADDRESS = 0x69;      //change Adress to MPU
 
   MPU9150_writeSensor(0x24, 0x40); //Wait for Data at Slave0
   MPU9150_writeSensor(0x25, 0x8C); //Set i2c address at slave0 at 0x0C
