@@ -6,3 +6,11 @@ C:\Users\Owner\Desktop\PBL\PBL2\data2C3\obj\Debug\data2C3.Properties.Resources.r
 C:\Users\Owner\Desktop\PBL\PBL2\data2C3\obj\Debug\data2C3.csproj.GenerateResource.Cache
 C:\Users\Owner\Desktop\PBL\PBL2\data2C3\obj\Debug\data2C3.exe
 C:\Users\Owner\Desktop\PBL\PBL2\data2C3\obj\Debug\data2C3.pdb
+C:\Users\ra\Documents\Magnet\data2C3\obj\Debug\data2C3.exe
+C:\Users\ra\Documents\Magnet\data2C3\obj\Debug\data2C3.pdb
+C:\Users\ra\Documents\Magnet\data2C3\bin\Debug\data2C3.exe
+C:\Users\ra\Documents\Magnet\data2C3\bin\Debug\data2C3.pdb
+C:\Users\ra\Documents\Magnet\data2C3\obj\Debug\data2C3.csprojResolveAssemblyReference.cache
+C:\Users\ra\Documents\Magnet\data2C3\obj\Debug\data2C3.Form1.resources
+C:\Users\ra\Documents\Magnet\data2C3\obj\Debug\data2C3.Properties.Resources.resources
+C:\Users\ra\Documents\Magnet\data2C3\obj\Debug\data2C3.csproj.GenerateResource.Cache

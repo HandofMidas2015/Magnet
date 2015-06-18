@@ -83,10 +83,6 @@ namespace data2C3
             this.wjText.Text = _serialPort.ReadLine();
             string data = _serialPort.ReadLine();
             string[] sp = data.Split(',');
-            if (sp.Length<4)
-            {
-                return ;
-            }
             string[] f = sp[0].Split('=');
             string[] x = sp[1].Split('=');
             string[] y = sp[2].Split('=');
@@ -152,7 +148,7 @@ namespace data2C3
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            _serialPort = new SerialPort("COM6", 115200, Parity.None, 8, StopBits.One);
+            _serialPort = new SerialPort("COM7", 115200, Parity.None, 8, StopBits.One);
             _serialPort.Handshake = Handshake.RequestToSendXOnXOff;
             _serialPort.DataReceived += new SerialDataReceivedEventHandler(_serialPort_DataReceived);
             _serialPort.Open();
