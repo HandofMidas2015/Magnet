@@ -17,10 +17,17 @@ namespace data2C3
     {
         double vx = 0, vy = 0, vz = 0;
         double sx = 0, sy = 0, sz = 0;
+        int i = 0;
+
+        string[] sp ;
+        string[] f ;
+        string[] x ;
+        string[] y ;
+        string[] z ;
 
         //startposision
-        double endposision_x;
-        double endposision_y;
+        double endposision_x = 500;
+        double endposision_y = 500;
 
         private static SerialPort _serialPort = null;
 
@@ -38,7 +45,7 @@ namespace data2C3
 
         [DllImport("user32.dll", EntryPoint = "SetCursorPos")]
         // SetCursorPos() makes everything possible
-        private static extern bool SetCursorPos(double x, double y);
+        private static extern bool SetCursorPos(int x, int y);
 
         //将枚举作为位域处理
         [Flags]
@@ -72,30 +79,58 @@ namespace data2C3
 
         void _serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
+            string tmp = _serialPort.ReadLine();
+            string tmp1 = _serialPort.ReadLine();
             this.Invoke(new EventHandler(DoUpdate));
+            
         }
         private void DoUpdate(object s, EventArgs e)
         {
-
+            i++;
             //byte[] buf = new byte[30];
-
-            //this.lbText.Text = _serialPort.ReadLine();
-            this.wjText.Text = _serialPort.ReadLine();
-            string data = _serialPort.ReadLine();
-            string[] sp = data.Split(',');
-            if (sp.Length<4)
+            try
             {
-                return ;
+                //this.lbText.Text = _serialPort.ReadLine();
+                this.wjText.Text = _serialPort.ReadLine();
+                string data = _serialPort.ReadLine();
+                 sp = data.Split(',');
+                 if (sp.Length < 4)
+                 {
+                     return;
+                 }
+                f = sp[0].Split('=');
+                x = sp[1].Split('=');
+                 y = sp[2].Split('=');
+                 z = sp[3].Split('=');
             }
-            string[] f = sp[0].Split('=');
-            string[] x = sp[1].Split('=');
-            string[] y = sp[2].Split('=');
-            string[] z = sp[3].Split('=');
-
+            catch(FormatException)
+            {
+                Console.Write("error");
+                x[1] = "0";
+                y[1] = "0";
+                z[1] = "0";
+            }
+            //Math.Round();
+            
             int fl = int.Parse(f[1]);
             double x1 = double.Parse(x[1]) * 9.8;
             double y1 = double.Parse(y[1]) * 9.8;
             double z1 = double.Parse(z[1]) * 9.8;
+           
+            if (x1 <= 0.25 & x1 >= -0.25 )
+            {
+                x1 = 0; 
+            }
+
+            if(y1 <= 0.25 & y1 >= -0.25)
+            {  
+                y1 =0;
+            }
+
+            if (z1 <= 9.9 & z1 >= -9.9)
+            {
+                z1=0;
+            }
 
             vx += x1 * 0.03;
             vy += y1 * 0.03;
@@ -104,36 +139,38 @@ namespace data2C3
             sx += vx * 0.03;
             sy += vy * 0.03;
             sz += vz * 0.03;
+            
 
-            //endposision_x = endposision_x + sx;
-            //endposision_y = endposision_y + sy;
+            endposision_x = endposision_x + sx;
+            endposision_y = endposision_y + sy;
+
 
             // New point that will be updated by the function with the current coordinates
-            Point defPnt = new Point();
-            GetCursorPos(ref defPnt);
+            //Point defPnt = new Point();
+            //GetCursorPos(ref defPnt);
 
-            endposision_x = defPnt.X + sx;
-            endposision_y = defPnt.Y + sy;
+            //endposision_x = defPnt.X + sx;
+            //endposision_y = defPnt.Y + sy;
 
             // posision range setting
             if (endposision_x < 0)
             {
                 endposision_x = 0;
             }
-            if (endposision_x > 1920)
+            if (endposision_x > 1600)
             {
-                endposision_x = 1920;
+                endposision_x = 1600;
             }
             if (endposision_y < 0)
             {
                 endposision_y = 0;
             }
-            if (endposision_y > 1080)
+            if (endposision_y > 900)
             {
-                endposision_y = 1080;
+                endposision_y = 900;
             }
 
-            SetCursorPos(endposision_x, endposision_y);
+            SetCursorPos(Convert.ToInt32(endposision_x), Convert.ToInt32(endposision_y));
 
             //SetCursorPos(1000, 700);
 
@@ -141,14 +178,36 @@ namespace data2C3
             {
                 mouse_event(MouseEventFlag.LeftDown, 0, 0, 0, UIntPtr.Zero);
             }
-            else
+            if(fl == 0)
             {
                 mouse_event(MouseEventFlag.LeftUp, 0, 0, 0, UIntPtr.Zero);
             }
+            if(fl == 2)
+            {
+                SendKeys.SendWait("{Left}");
 
-            this.wjText.Text = Convert.ToString(fl + "/n" + endposision_x + "," + endposision_y + "/n" + sx + "/n" + sy + "/n" + defPnt.X + "," + defPnt.Y);
+            }
+
+           // this.wjText.Text = Convert.ToString(fl + "\n" + endposision_x + "\n" + endposision_y + "\n" + sx + "\n" + sy + "\n" + defPnt.X + "\n" + defPnt.Y);
+            //this.wjText.Text = Convert.ToString(fl + "\n" + endposision_x + "\n" + endposision_y + "\n" + sx + "\n" + sy );
+
+            
+            if (i == 200)
+            {
+                vx = 0;
+                vy = 0;
+                vz = 0;
+                sx = 0;
+                sy = 0;
+                sz = 0;
+                endposision_x = 500;
+                endposision_y = 500;
+                i = 0;
+            }
             
         }
+
+        //
 
         private void btnStart_Click(object sender, EventArgs e)
         {
@@ -156,6 +215,7 @@ namespace data2C3
             _serialPort.Handshake = Handshake.RequestToSendXOnXOff;
             _serialPort.DataReceived += new SerialDataReceivedEventHandler(_serialPort_DataReceived);
             _serialPort.Open();
+            //string data = _serialPort.ReadLine();
 
             this.btnStart.Enabled = false;
         }
