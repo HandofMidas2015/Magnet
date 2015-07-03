@@ -1,0 +1,40 @@
+C:\Users\Owner\Desktop\PBL\PBL2\data2C3\bin\Debug\data2C3.exe
+C:\Users\Owner\Desktop\PBL\PBL2\data2C3\bin\Debug\data2C3.pdb
+C:\Users\Owner\Desktop\PBL\PBL2\data2C3\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Owner\Desktop\PBL\PBL2\data2C3\obj\Debug\data2C3.Form1.resources
+C:\Users\Owner\Desktop\PBL\PBL2\data2C3\obj\Debug\data2C3.Properties.Resources.resources
+C:\Users\Owner\Desktop\PBL\PBL2\data2C3\obj\Debug\data2C3.csproj.GenerateResource.Cache
+C:\Users\Owner\Desktop\PBL\PBL2\data2C3\obj\Debug\data2C3.exe
+C:\Users\Owner\Desktop\PBL\PBL2\data2C3\obj\Debug\data2C3.pdb
+C:\Users\Owner\Desktop\PBL\data2C3\obj\Debug\data2C3.exe
+C:\Users\Owner\Desktop\PBL\data2C3\obj\Debug\data2C3.pdb
+C:\Users\Owner\Desktop\PBL\data2C3\bin\Debug\data2C3.exe
+C:\Users\Owner\Desktop\PBL\data2C3\bin\Debug\data2C3.pdb
+C:\Users\Owner\Desktop\PBL\data2C3\obj\Debug\data2C3.csprojResolveAssemblyReference.cache
+C:\Users\Owner\Desktop\PBL\data2C3\obj\Debug\data2C3.Form1.resources
+C:\Users\Owner\Desktop\PBL\data2C3\obj\Debug\data2C3.Properties.Resources.resources
+C:\Users\Owner\Desktop\PBL\data2C3\obj\Debug\data2C3.csproj.GenerateResource.Cache
+C:\Users\ra\Desktop\data2C3\obj\Debug\data2C3.exe
+C:\Users\ra\Desktop\data2C3\obj\Debug\data2C3.pdb
+C:\Users\ra\Desktop\data2C3\bin\Debug\data2C3.exe
+C:\Users\ra\Desktop\data2C3\bin\Debug\data2C3.pdb
+C:\Users\ra\Desktop\data2C3\obj\Debug\data2C3.csprojResolveAssemblyReference.cache
+C:\Users\ra\Desktop\data2C3\obj\Debug\data2C3.Form1.resources
+C:\Users\ra\Desktop\data2C3\obj\Debug\data2C3.Properties.Resources.resources
+C:\Users\ra\Desktop\data2C3\obj\Debug\data2C3.csproj.GenerateResource.Cache
+C:\Users\ra\Desktop\data2C3 - コピー\obj\Debug\data2C3.exe
+C:\Users\ra\Desktop\data2C3 - コピー\obj\Debug\data2C3.pdb
+C:\Users\ra\Desktop\data2C3 - コピー\bin\Debug\data2C3.exe
+C:\Users\ra\Desktop\data2C3 - コピー\bin\Debug\data2C3.pdb
+C:\Users\ra\Desktop\data2C3 - コピー\obj\Debug\data2C3.csprojResolveAssemblyReference.cache
+C:\Users\ra\Desktop\data2C3 - コピー\obj\Debug\data2C3.Form1.resources
+C:\Users\ra\Desktop\data2C3 - コピー\obj\Debug\data2C3.Properties.Resources.resources
+C:\Users\ra\Desktop\data2C3 - コピー\obj\Debug\data2C3.csproj.GenerateResource.Cache
+C:\Users\Owner\Desktop\PBL\PBL3\data2C3 - コピー\data2C3 - コピー\obj\Debug\data2C3.exe
+C:\Users\Owner\Desktop\PBL\PBL3\data2C3 - コピー\data2C3 - コピー\obj\Debug\data2C3.pdb
+C:\Users\Owner\Desktop\PBL\PBL3\data2C3 - コピー\data2C3 - コピー\bin\Debug\data2C3.exe
+C:\Users\Owner\Desktop\PBL\PBL3\data2C3 - コピー\data2C3 - コピー\bin\Debug\data2C3.pdb
+C:\Users\Owner\Desktop\PBL\PBL3\data2C3 - コピー\data2C3 - コピー\obj\Debug\data2C3.csprojResolveAssemblyReference.cache
+C:\Users\Owner\Desktop\PBL\PBL3\data2C3 - コピー\data2C3 - コピー\obj\Debug\data2C3.Form1.resources
+C:\Users\Owner\Desktop\PBL\PBL3\data2C3 - コピー\data2C3 - コピー\obj\Debug\data2C3.Properties.Resources.resources
+C:\Users\Owner\Desktop\PBL\PBL3\data2C3 - コピー\data2C3 - コピー\obj\Debug\data2C3.csproj.GenerateResource.Cache
